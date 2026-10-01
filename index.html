@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+  LABORATORIO HTML5 - Estructura básica de una página web
+  Características principales y ventajas de la estructura HTML5:
+  1. <!DOCTYPE html> es más corto y simple que el de versiones anteriores.
+  2. Etiquetas semánticas (header, nav, main, article, section, footer):
+     describen el significado del contenido, no solo su apariencia.
+  3. Multimedia nativa (<video> y <audio>) sin necesidad de plugins como Flash.
+  4. <canvas> permite dibujar gráficos con JavaScript directamente en la página.
+  5. <figure> y <figcaption> asocian una imagen con su descripción.
+  6. Mejor accesibilidad y SEO, porque los lectores de pantalla y los buscadores
+     entienden mejor la estructura.
+  7. Atributo lang y meta viewport para páginas adaptables a celulares.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio HTML5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SEMÁNTICA: header contiene la cabecera de la página -->
+  <header>
+    <h1>Laboratorio HTML5</h1>
+    <p>Estructura básica de una página web</p>
+
+    <!-- SEMÁNTICA: nav agrupa los enlaces de navegación -->
+    <nav>
+      <ul>
+        <li><a href="#sintaxis">Sintaxis</a></li>
+        <li><a href="#semantica">Semántica</a></li>
+        <li><a href="#html5">HTML5</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SEMÁNTICA: main es el contenido principal -->
+  <main>
+
+    <!-- 1. SINTAXIS: etiquetas de apertura y cierre, atributos y valores -->
+    <section id="sintaxis">
+      <h2>1. Sintaxis de HTML</h2>
+      <p>Un elemento HTML tiene una etiqueta de apertura, un contenido y una etiqueta de cierre. Los atributos dan información extra al elemento, por ejemplo <code>href="..."</code> en un enlace.</p>
+      <ul>
+        <li><code>&lt;html&gt;</code>: contiene todo el documento.</li>
+        <li><code>&lt;head&gt;</code>: información que no se muestra.</li>
+        <li><code>&lt;body&gt;</code>: contenido visible de la página.</li>
+      </ul>
+      <p>Más información en <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">MDN</a>.</p>
+    </section>
+
+    <!-- 2. SEMÁNTICA: section y article con significado propio -->
+    <section id="semantica">
+      <h2>2. Semántica de HTML</h2>
+      <article>
+        <h3>¿Qué es la semántica?</h3>
+        <p>Es usar etiquetas que describen qué tipo de contenido contienen, como header, nav, main, section, article y footer.</p>
+      </article>
+    </section>
+
+    <!-- 3. HTML5: video, audio, canvas, figure y figcaption -->
+    <section id="html5">
+      <h2>3. Características de HTML5</h2>
+
+      <h3>Video</h3>
+      <video controls width="480">
+        <source src="video/demo.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta video.
+      </video>
+
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="audio/tono.wav" type="audio/wav">
+        Tu navegador no soporta la etiqueta audio.
+      </audio>
+
+      <h3>Canvas</h3>
+      <canvas id="lienzo" width="300" height="150"></canvas>
+
+      <h3>Figure y figcaption</h3>
+      <figure>
+        <img src="imagenes/estructura.svg" alt="Estructura semántica de una página HTML5" width="360">
+        <figcaption>Figura 1: Estructura semántica de una página HTML5.</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <!-- SEMÁNTICA: footer es el pie de página -->
+  <footer>
+    <p>Laboratorio HTML5</p>
+  </footer>
+
+  <script>
+    // Dibujo en el canvas (característica de HTML5)
+    const ctx = document.getElementById('lienzo').getContext('2d');
+    ctx.fillStyle = '#2b3a67';
+    ctx.fillRect(10, 10, 130, 130);
+    ctx.fillStyle = '#e07a5f';
+    ctx.beginPath();
+    ctx.arc(220, 75, 55, 0, Math.PI * 2);
+    ctx.fill();
+  </script>
+</body>
+</html>

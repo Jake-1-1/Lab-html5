@@ -1,0 +1,92 @@
+/* Estilos del Laboratorio HTML5 */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f6fb;
+}
+
+header {
+  background: #2b3a67;
+  color: #fff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 { margin: 0 0 4px; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+nav a:hover { background: #e07a5f; }
+
+main {
+  max-width: 860px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 { color: #2b3a67; border-bottom: 2px solid #e07a5f; padding-bottom: 4px; }
+
+article {
+  background: #eef1f9;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+aside {
+  border-left: 4px solid #e07a5f;
+  background: #fff4f0;
+  padding: 8px 16px;
+  margin-top: 12px;
+}
+
+code {
+  background: #eee;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+video, canvas, img { max-width: 100%; height: auto; }
+canvas { border: 1px solid #ccc; background: #fafafa; }
+
+figure { margin: 0; }
+figcaption { font-size: 0.9em; color: #555; font-style: italic; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+th { background: #2b3a67; color: #fff; }
+
+footer {
+  text-align: center;
+  padding: 16px;
+  background: #2b3a67;
+  color: #fff;
+}
